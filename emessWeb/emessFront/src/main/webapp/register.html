@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>广告主注册</title>
+    <meta name="keywords" content="买广告,卖广告,广告投放,广告投放平台,广告交易平台,网络广告投放,广告精准投放">
+    <meta name="description"
+          content="传播易|国内最大的广告投放平台:买广告/卖广告就选传播易,目前累计入驻10万广告资源,8万广告主在传播易采购广告,传播易秉承以'让传播更容易'为宗旨服务广告客户!">
+    <!-- 核心 CSS 文件 -->
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/my1.css">
+    <link rel="stylesheet" href="css/my2.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/CM_list.css">
+    <link rel="stylesheet" href="css/table_form.css">
+    <link rel="stylesheet" href="css/common-new.css">
+    <link rel="stylesheet" href="css/registerForm.css">
+    <script src="js/push.js"></script>
+    <script charset="utf-8" src="js/v.htm"></script>
+    <script src="js/hm.js"></script>
+    <script charset="utf-8" async="" src="js/index-new.js"></script>
+    <script type="text/javascript" src="js/zh-cn.js"></script>
+    <script src="js/jquery_002.js" type="text/javascript"></script>
+    <script src="js/bootstrap.js" type="text/javascript"></script>
+    <!-- Custom styles for this template -->
+    <!--关键JS开始-->
+    <link rel="stylesheet" href="css/default.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/validate.js"></script>
+    <script type="text/javascript" src="js/admin.js"></script>
+    <script type="text/javascript" src="js/system.js"></script>
+    <script type="text/javascript" src="js/check.js"></script>
+</head>
+
+<body>
+<link rel="stylesheet" href="img/reg.css">
+<div class="register" id="r1">
+    <div class="w1200 pos_relative">
+        <div class="loginreg_fromCss">
+            <div class="loginTwoCss">
+                <ul class="nav nav-tabs cby_dl mb10 co6">
+                    <li id="e1" class="active">广告主</li>
+                    <li id="e2" onclick="window.location.href='register-mt.html'">
+                        媒体主
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane tace active">
+                        <form method="post" id="myform" action="submitRegister">
+                            <div class="coh">有营销需求的企业或个人。</div>
+                            <div class="input-group mr40 ml40 mt15 mb15">
+                                <input type="text" class="form-control rol_1" id="usName"
+                                       name="usName" placeholder="请输入您的用户名"
+                                       onblur="checkPhone()" oninput="checkPhone()"> <span
+                                    class="default"></span>
+                            </div>
+                            <div class="input-group mr40 ml40 mt15 mb15">
+                                <input type="text" class="form-control rol_1" id="usTel"
+                                       name="usTel" placeholder="请输入您的手机号码"
+                                       onblur="checkPhone()" oninput="checkPhone()"> <span
+                                    class="default" id="phoneErr"></span>
+                            </div>
+                            <div class="input-group mr40 ml40 mt15">
+                                <input type="password" class="form-control rol_1"
+                                       id="usPass" name="usPass" placeholder="请输入您的密码"
+                                       onblur="checkPassword()" oninput="checkPassword()">
+                                <span class="default" id="passwordErr"></span>
+                            </div>
+                            <div class="input-group mr40 ml40 mt15">
+                                <input type="password" class="form-control rol_1"
+                                       placeholder="请再次输入您的密码" onblur="ConfirmPassword()"
+                                       oninput="ConfirmPassword()">
+                                <span class="default" id="conPasswordErr"></span>
+                            </div>
+                            <script type="text/javascript">
+                                $("input").placeholder();
+                            </script>
+                            <div class="cl"></div>
+                            <li class="col-sm-12 agreementCheck">
+                                <input type="checkbox" class="clause" name="clause" id="mer_clause" onclick="c_box()">
+                                <span class="f12">我已阅读并同意
+                                    <a href="#" class="text-danger" target="_blank">《传播易服务条款》</a>
+                                </span>
+                            </li>
+                            <div class="loginFormBtn mr40 ml40 mt30">
+                                <input type="submit" class="form-control btn-danger bor bora5 f20"
+                                       style="width: 320px; height: 55px;" tabindex="6" disabled="disabled" id="sub" value="立即注册">
+                            </div>
+                        </form>
+                        <div class="fr mr10 mt15 mb5 cof mr40">
+                            已有账号？
+                            <a href="login.html" class="coh"> 直接登录 </a>
+                        </div>
+                        <div class="cl"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    // 协议 校验
+    function c_box() {
+        var c_b = document.getElementById("mer_clause");
+        var c_sub = document.getElementById("sub");
+        if (c_b.checked) {
+            c_sub.disabled = false;
+        } else {
+            c_sub.disabled = true;
+        }
+    }
+</script>
+<div class="clear"></div>
+
+
+<script type="text/javascript" src="js/cart.js"></script>
+<script type="text/javascript" src="js/slither.js"></script>
+<script type="text/javascript" src="js/20003119.js"></script>
+
+
+<div style="display: none; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; cursor: move; opacity: 0; background: rgb(255, 255, 255) none repeat scroll 0% 0%;"></div>
+</body>
+</html>

@@ -1,0 +1,353 @@
+@charset "utf-8";
+/* CSS Document */
+.wid1200 {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.box-sizing {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.location a{
+    color: #333;
+}
+.cut-container a {
+    display: inline-block;
+    width: 180px;
+    height: 68px;
+    background-color: rgba(60, 136, 255, 0.3);
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    line-height: 68px;
+}
+
+.cut-container a.on {
+    background-color: rgba(60, 136, 255, 1);;
+    color: #ffffff;
+    text-align: center;
+}
+
+/*鎼滅储鍒楄〃*/
+.search-box {
+    position: relative;
+    /*-webkit-user-select: none;*/
+    /*-moz-user-select: none;*/
+    /*-ms-user-select: none;*/
+    /*user-select: none;*/
+    width: 1200px;
+    margin: 0 auto;
+    /*-webkit-box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.1);*/
+}
+
+.search-left {
+    background: #ffffff;
+}
+
+.search-list {
+    width: 1178px;
+    min-height: 60px;
+    border-bottom: 1px dashed #e8e5f1;
+    background: #f5f7fa;
+    margin: 0px 10px;
+}
+
+.search-list .sl-key select{
+	width: 90px;
+    margin-left: 10px;
+}
+
+.search-tit {
+    height: 100%;
+    width: 110px;
+    padding-left: 25px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    line-height: 60px;
+    background: #f5f7fa;
+    color: #888888;
+    font-size: 14px;
+}
+
+.search-uls {
+    width: 1068px;
+    height: 60px;
+    background: #ffffff;
+}
+
+.search-lis {
+    padding: 0 15px 0 20px;
+    font-size: 14px;
+    height: 60px;
+    line-height: 60px;
+}
+
+.search-list .search-ul {
+    position: relative;
+    width: 1068px;
+    padding-top: 20px;
+    height: 60px;
+    overflow: hidden;
+    background: #ffffff;
+}
+
+.search-list .search-ul.on{
+    height: auto;
+}
+.search-li {
+    height: 22px !important;
+    line-height: 22px !important;
+}
+
+.search-lis > a:hover, .search-lis > a.on {
+    color: #f10215;
+}
+
+.search-ul li {
+    margin-bottom: 16px;
+}
+
+.search-lis a {
+    color: #858585;
+}
+
+.unfold {
+    width: 80px;
+    cursor: pointer;
+    height: 22px;
+}
+
+.unfold p {
+    border: 1px solid #f10215;
+    margin: 0 auto;
+    width: 58px;
+    height: 22px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.unfold p span {
+    font-size: 12px !important;
+    color: #f10215;
+	font-family: FontAwesome !important;
+}
+
+.search-fans {
+    margin: 18px 12px 0 0;
+}
+
+.search-fans span {
+    height: 22px;
+    line-height: 22px;
+    color: rgba(173, 173, 173, 0.6);
+    margin: 0 10px;
+}
+
+.text1 {
+    width: 50px;
+    height: 22px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    padding-left: 10px;
+}
+.search-fans .danwei{
+    margin-left: 5px;
+    color: #4c4c4c;
+    margin-right: 0;
+}
+.btn1 {
+    cursor: pointer;
+    width: 45px;
+    height: 22px;
+    background: #007cef;
+    color: #ffffff;
+    margin-left: 8px;
+}
+
+.btn1:active {
+    background: #fd4249;
+}
+
+.search-tit1-box {
+    display: inline-block;
+    position: relative;
+    width: 76px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.search-tit1-box p {
+    position: relative;
+    padding-left: 5px;
+    height: 22px;
+    background: url("../images/CM_list/please_sel.png") no-repeat center;
+    line-height: 22px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.search-tit-select {
+    width: 50px;
+    height: 22px;
+}
+.search-tit-option {
+    position: absolute;
+    top: 22px;
+    left: 0;
+    line-height: 1;
+    padding: 0 5px;
+    font-size: 12px;
+    background: #ffffff;
+    border: 1px solid #e2e2e2;
+    z-index: 22;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+}
+
+.search-tit-option li {
+    padding: 5px 0;
+    white-space: nowrap;
+}
+
+/*鐪佷笅鎷夎彍鍗�*/
+.province {
+    position: relative;
+    width: 120px;
+    height: 28px;
+    border: solid 1px #e3e3e3;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.province p {
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+    color: #666666;
+    padding: 0 10px;
+}
+
+.province p span {
+    color: #666666;
+	font-family: FontAwesome !important;
+}
+
+.province-list {
+    position: absolute;
+    top: 28px;
+    left: -1px;
+    line-height: 28px;
+    background: #ffffff;
+    width: 100%;
+    border: 1px solid #e3e3e3;
+    overflow-y: scroll;
+    height: 0;
+    opacity: 0;
+    z-index: 10;
+}
+
+.province-list li {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 10px;
+}
+
+.province-list li:hover {
+    background: #007cef;
+    color: #ffffff;
+}
+
+.search-area {
+    margin: 15px 12px 0 0;
+}
+
+.search-area input {
+    width: 150px;
+    height: 28px;
+    border: 1px solid rgba(27, 27, 27, 0.12);
+}
+
+.search-area .btn2 {
+    cursor: pointer;
+    width: 48px;
+    height: 28px;
+    color: #ffffff;
+    background: #007cef;
+}
+
+.search-area-tit {
+    height: 28px;
+    line-height: 28px;
+    padding-right: 10px;
+    color: #858585;
+}
+
+.search-area-input {
+    padding-left: 10px;
+}
+
+.search-area .btn2:active {
+    background: #fd4249;
+}
+
+.search-list-btm {
+    border-top: 1px dashed #e8e5f1;
+    background: #ffffff;
+}
+
+.btm-tit {
+    height: 60px;
+    line-height: 60px;
+    color: #949393;
+    padding-left: 25px;
+    width: 125px;
+}
+
+.result-list {
+    width: 121px;
+    height: 30px;
+    background-color: #ffffff;
+    border: 1px solid #f10215;
+    position: relative;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    color: #f10215;
+    margin-top: 13px;
+    margin-left: 5px;
+}
+
+.result-list a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+	color: #f10215;
+}
+
+.cancel-list {
+    cursor: pointer;
+    position: absolute;
+    right: -1px;
+    top: -1px;
+    width: 12px;
+    height: 11px;
+    line-height: 9px;
+    text-align: center;
+    background-color: #f10215;
+    font-size: 8px;
+    color: #ffffff;
+}
+
+.icon-jiantouarrow483:before { 
+     content: "\f107"; 
+}
+
+.icon-jiantouarrow483-copy:before {
+    content: "\f106";
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="emessBack" />
+        <module name="emessDto" />
+        <module name="emessdto" />
+        <module name="emessFront" />
+        <module name="emessinterface" />
+        <module name="emessInterface" />
+        <module name="emessMapper" />
+        <module name="emessmapper" />
+        <module name="emesspojo" />
+        <module name="emessPojo" />
+        <module name="emessservice" />
+        <module name="emessService" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="emessHome" target="1.8" />
+      <module name="Front" target="1.8" />
+      <module name="maven-archiver (1)" target="1.8" />
+      <module name="maven-archiver (2)" target="1.8" />
+      <module name="maven-archiver (3)" target="1.8" />
+      <module name="maven-archiver (4)" target="1.8" />
+      <module name="maven-archiver (5)" target="1.8" />
+      <module name="maven-archiver (6)" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

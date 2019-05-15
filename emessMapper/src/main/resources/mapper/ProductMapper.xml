@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.eme.mapper.IProductMapper" >
+  <resultMap id="BaseResultMap" type="com.eme.pojo.Product" >
+    <id column="prId" property="prid" jdbcType="INTEGER" />
+    <result column="prTittle" property="prtittle" jdbcType="VARCHAR" />
+    <result column="prImg" property="primg" jdbcType="VARCHAR" />
+    <result column="prSite" property="prsite" jdbcType="VARCHAR" />
+    <result column="prType" property="prtype" jdbcType="VARCHAR" />
+    <result column="prArea" property="prarea" jdbcType="VARCHAR" />
+    <result column="prPrice" property="prprice" jdbcType="VARCHAR" />
+    <result column="prMode" property="prmode" jdbcType="VARCHAR" />
+    <result column="prIntro" property="printro" jdbcType="VARCHAR" />
+    <result column="prFans" property="prfans" jdbcType="VARCHAR" />
+    <result column="prStatus" property="prstatus" jdbcType="VARCHAR" />
+  </resultMap>
+  
+  <sql id="Base_Column_List" >
+    prId, prTittle, prImg, prSite, prType, prArea, prPrice, prMode, prIntro, prFans, 
+    prStatus
+  </sql>
+  <select id="selectAllProduct" resultMap="BaseResultMap" >
+    select
+    <include refid="Base_Column_List" />
+    from product
+  </select>
+  
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select
+    <include refid="Base_Column_List" />
+    from product
+    where prId = #{prid,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectByMess" resultMap="BaseResultMap" parameterType="com.eme.pojo.Product" >
+    select
+    <include refid="Base_Column_List" />
+    from product
+    where prtype = #{prtype,jdbcType=VARCHAR},
+    and prarea = #{prarea,jdbcType=VARCHAR}
+  </select>
+  
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from product
+    where prId = #{prid,jdbcType=INTEGER}
+  </delete>
+  
+  <insert id="insert" parameterType="com.eme.pojo.Product" >
+    insert into product (prId, prTittle, prImg, 
+      prSite, prType, prArea, 
+      prPrice, prMode, prIntro, 
+      prFans, prStatus)
+    values (#{prid,jdbcType=INTEGER}, #{prtittle,jdbcType=VARCHAR}, #{primg,jdbcType=VARCHAR}, 
+      #{prsite,jdbcType=VARCHAR}, #{prtype,jdbcType=VARCHAR}, #{prarea,jdbcType=VARCHAR}, 
+      #{prprice,jdbcType=VARCHAR}, #{prmode,jdbcType=VARCHAR}, #{printro,jdbcType=VARCHAR}, 
+      #{prfans,jdbcType=VARCHAR}, #{prstatus,jdbcType=VARCHAR})
+  </insert>
+  
+  <select id="countByProduct" parameterType="com.eme.pojo.Product" resultType="java.lang.Integer" >
+    select count(*) from product
+  </select>
+  
+  <update id="updateByProduct" parameterType="map" >
+    update product
+    set prId = #{record.prid,jdbcType=INTEGER},
+      prTittle = #{record.prtittle,jdbcType=VARCHAR},
+      prImg = #{record.primg,jdbcType=VARCHAR},
+      prSite = #{record.prsite,jdbcType=VARCHAR},
+      prType = #{record.prtype,jdbcType=VARCHAR},
+      prArea = #{record.prarea,jdbcType=VARCHAR},
+      prPrice = #{record.prprice,jdbcType=VARCHAR},
+      prMode = #{record.prmode,jdbcType=VARCHAR},
+      prIntro = #{record.printro,jdbcType=VARCHAR},
+      prFans = #{record.prfans,jdbcType=VARCHAR},
+      prStatus = #{record.prstatus,jdbcType=VARCHAR}
+  </update>
+  
+  <update id="updateByPrimaryKey" parameterType="com.eme.pojo.Product" >
+    update product
+    set prTittle = #{prtittle,jdbcType=VARCHAR},
+      prImg = #{primg,jdbcType=VARCHAR},
+      prSite = #{prsite,jdbcType=VARCHAR},
+      prType = #{prtype,jdbcType=VARCHAR},
+      prArea = #{prarea,jdbcType=VARCHAR},
+      prPrice = #{prprice,jdbcType=VARCHAR},
+      prMode = #{prmode,jdbcType=VARCHAR},
+      prIntro = #{printro,jdbcType=VARCHAR},
+      prFans = #{prfans,jdbcType=VARCHAR},
+      prStatus = #{prstatus,jdbcType=VARCHAR}
+    where prId = #{prid,jdbcType=INTEGER}
+  </update>
+</mapper>

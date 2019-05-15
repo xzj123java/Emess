@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.eme.mapper.IUsersMapper" >
+  <resultMap id="BaseResultMap" type="com.eme.pojo.Users" >
+    <id column="usId" property="usid" jdbcType="INTEGER" />
+    <result column="usName" property="usname" jdbcType="VARCHAR" />
+    <result column="usPass" property="uspass" jdbcType="VARCHAR" />
+    <result column="usTel" property="ustel" jdbcType="VARCHAR" />
+    <result column="usPhoto" property="usphoto" jdbcType="VARCHAR" />
+    <result column="usLive" property="uslive" jdbcType="INTEGER" />
+  </resultMap>
+  
+  <sql id="Base_Column_List" >
+    usId, usName, usPass, usTel, usPhoto, usLive
+  </sql>
+  <select id="selectAllUsers" resultMap="BaseResultMap" >
+    select
+    <include refid="Base_Column_List" />
+    from users
+  </select>
+  
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from users
+    where usId = #{usid,jdbcType=INTEGER}
+  </select>
+  
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from users
+    where usId = #{usid,jdbcType=INTEGER}
+  </delete>
+  
+  <insert id="insert" parameterType="com.eme.pojo.Users" >
+    insert into users (usId, usName, usPass, 
+      usTel, usPhoto, usLive
+      )
+    values (#{usid,jdbcType=INTEGER}, #{usname,jdbcType=VARCHAR}, #{uspass,jdbcType=VARCHAR}, 
+      #{ustel,jdbcType=VARCHAR}, #{usphoto,jdbcType=VARCHAR}, #{uslive,jdbcType=INTEGER}
+      )
+  </insert>
+  
+  <update id="updateByUsers" parameterType="map" >
+    update users
+    set usId = #{record.usid,jdbcType=INTEGER},
+      usName = #{record.usname,jdbcType=VARCHAR},
+      usPass = #{record.uspass,jdbcType=VARCHAR},
+      usTel = #{record.ustel,jdbcType=VARCHAR},
+      usPhoto = #{record.usphoto,jdbcType=VARCHAR},
+      usLive = #{record.uslive,jdbcType=INTEGER}
+  </update>
+  
+  <update id="updateByPrimaryKey" parameterType="com.eme.pojo.Users" >
+    update users
+    set usName = #{usname,jdbcType=VARCHAR},
+      usPass = #{uspass,jdbcType=VARCHAR},
+      usTel = #{ustel,jdbcType=VARCHAR},
+      usPhoto = #{usphoto,jdbcType=VARCHAR},
+      usLive = #{uslive,jdbcType=INTEGER}
+    where usId = #{usid,jdbcType=INTEGER}
+  </update>
+</mapper>
